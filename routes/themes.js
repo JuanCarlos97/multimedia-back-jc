@@ -7,7 +7,7 @@ const auth = require('../middleware/authMiddleware');
 router.post('/', auth, themesController.createTheme);
 
 // Get all themes
-router.get('/', auth, themesController.getAllThemes);
+router.get('/', themesController.getAllThemes);
 
 // Get a theme by ID
 router.get('/:id', auth, themesController.getThemeById);
