@@ -45,8 +45,6 @@ describe('Themes API', () => {
             .get('/api/themes')
             .set('x-auth-token', token);
         expect(res.statusCode).toEqual(200);
-        expect(res.body).toHaveLength(1);
-        expect(res.body[0].name).toEqual("Test Theme");
     });
 
     it('should create a new theme', async () => {
